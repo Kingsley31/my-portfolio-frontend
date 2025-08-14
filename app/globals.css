@@ -142,7 +142,7 @@
     opacity: 0;
   }
   40% { 
-    transform: translateY(6px); 
+    transform: translateY(2%); 
     opacity: 1;
   }
 }

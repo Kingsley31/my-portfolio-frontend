@@ -1,5 +1,6 @@
 "use client";
 
+import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import React, { useEffect } from "react";
 import {
@@ -16,17 +17,19 @@ import {
 export function SkillsCircle() {
   const [mounted, setMounted] = React.useState(false);
   useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
-  
+  if (!mounted) return (<div className="flex items-center md:items-start justify-center">
+                          <Skeleton className="w-70 h-70 md:w-90 md:h-90 rounded-full" />
+                        </div>);
+                        
     const skills = [
-    SiReact,
-    SiNodedotjs,
-    SiTypescript,
-    SiPython,
-    SiDocker,
-    SiPostgresql,
-    SiMongodb,
-    SiGraphql,
+      SiReact,
+      SiNodedotjs,
+      SiTypescript,
+      SiPython,
+      SiDocker,
+      SiPostgresql,
+      SiMongodb,
+      SiGraphql,
   ];
 
 

@@ -27,13 +27,13 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="en" className="p-0 m-0">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh m-0 p-0 w-dvw overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-dvh m-0 p-0 w-dvw overflow-x-hidden bg-black`}
       >
-        <SidebarProvider defaultOpen={false}>
+        <SidebarProvider defaultOpen={false} className="m-0 p-0">
           <AppSidebar />
-          <main className="w-full">
+          <main className="w-screen m-0 p-0">
             {children}
           </main>
         </SidebarProvider>
