@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useIsActive } from "./use-is-active.hook";
 
 export function AppSidebar() {
-  const { isActive } = useIsActive();
+  const { isActive, hash } = useIsActive();
     return (
     <Sidebar variant="floating" className="z-1000">
       <SidebarContent className="mt-25">
@@ -13,7 +13,7 @@ export function AppSidebar() {
           {navItems.map((item) => (
             <SidebarMenuItem key={item.title}>
               <SidebarMenuButton asChild>
-                <Link href={item.url} className={isActive(item) ? "text-primary font-bold" : ""}>
+                <Link href={item.url} className={isActive(item,hash) ? "text-primary font-bold" : ""}>
                   <item.icon />
                   <span>{item.title}</span>
                 </Link>
