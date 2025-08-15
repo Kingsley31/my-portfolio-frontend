@@ -6,7 +6,7 @@ import Image from "next/image";
 export function AboutSection(){
     const careaProfile = getCareaProfile();
     return (
-        <div id='about' className="relative pr-4 md:pr-20 lg:pr-20 h-dvh pt-15 md:pt-15 snap-start w-full overflow-x-hidden bg-[#E5E5E5]">
+        <div id='about' className="relative pr-4 md:pr-20 lg:pr-20 h-dvh pt-15 md:pt-15 snap-start scroll-mr-0 w-full overflow-x-hidden bg-[#E5E5E5]">
             <AboutContent>
                 <h2 className="block md:hidden text-xl text-center md:text-left font-bold w-full">About Me</h2>
                 <div className="flex itmes-center justify-start md:justify-center h-45 md:h-145 relative w-full md:w-auto">

@@ -1,4 +1,4 @@
-import { CircleUserRound, Contact, Home, Lightbulb, LucideIcon, MessageCircle, Projector, Rss } from "lucide-react";
+import { CircleUserRound, Home, Lightbulb, LucideIcon, MessageCircle, Projector, Rss } from "lucide-react";
 
 export type NavItem = {
   title: string;

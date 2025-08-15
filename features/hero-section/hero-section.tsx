@@ -9,7 +9,7 @@ import ScrollDownIndicator from "./scrolldown-indicator";
 export function HeroSection() {
     const personalDetails = getPersonalDetails();
     return (
-        <div className="bg-white relative px-4 md:px-10 lg:px-20 h-dvh pt-15 md:pt-0 snap-start w-full overflow-x-hidden">
+        <div id='#' className="bg-white relative px-4 md:px-10 lg:px-20 h-dvh pt-15 md:pt-0 snap-start scroll-mr-0 w-full overflow-x-hidden">
             <HeroContent>
                 <p className="block md:hidden mx-auto text-base mt-5">Hello, I’m {personalDetails.middleName}</p>
                 <div className="mt-0 md:mt-0">

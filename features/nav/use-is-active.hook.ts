@@ -6,13 +6,13 @@ export function useIsActive() {
       const [hash, setHash] = useState("#");
 
   useEffect(() => {
-    const updateHash = () => setHash(window.location.hash || "#");
+    const updateHash = () => setHash(window.location.hash.trim() || "#");
     updateHash();
     window.addEventListener("hashchange", updateHash);
     return () => window.removeEventListener("hashchange", updateHash);
   }, []);
 
-  const isActive = (item: NavItem) => hash === item.url;
+  const isActive = (item: NavItem, currentHash:string) => currentHash === item.url;
 
-  return { isActive };
+  return { isActive, hash };
 }
