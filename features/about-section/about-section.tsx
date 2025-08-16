@@ -19,7 +19,7 @@ export function AboutSection(){
                 </div>
                 <div>
                     <h2 className="hidden md:block text-3xl text-left font-bold">About Me</h2>
-                    <p className="text-base/8 md:text-xl/8 text-center md:text-justify mt-0 md:mt-4 px-4 md:px-0">{careaProfile.aboutText}</p>
+                    <p className="text-sm/8 md:text-xl/8 text-center md:text-justify mt-0 md:mt-4 px-4 md:px-0">{careaProfile.aboutText}</p>
                 </div>
             </AboutContent>
         </div>
