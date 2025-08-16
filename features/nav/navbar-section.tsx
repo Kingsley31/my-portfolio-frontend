@@ -14,7 +14,7 @@ export function NavBarSection() {
   
 
     return (
-        <div className="fixed top-0 right-0 left-0 md:right-4 z-100">
+        <div className="fixed top-0 right-0 left-0 md:right-4 xl:right-6 xl:left-6 z-100">
         <div className="flex flex-row items-center justify-between max-w-6xl mx-auto px-4 md:px-10 lg:px-20 bg-white h-20">
             <div className="flex flex-row items-center gap-4">
                 <Button className="block md:hidden" onClick={toggleSidebar} variant={"ghost"} size={"icon"} asChild><Menu className="text-primary"/></Button>

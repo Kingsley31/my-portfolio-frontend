@@ -1,6 +1,7 @@
 import { AboutSection } from "@/features/about-section/about-section";
 import { HeroSection } from "@/features/hero-section/hero-section";
 import { NavBarSection } from "@/features/nav/navbar-section";
+import { ProjectSection } from "@/features/project-section/projects-section";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <NavBarSection />
       <HeroSection />
       <AboutSection />
+      <ProjectSection/>
     </div>
   );
 }
