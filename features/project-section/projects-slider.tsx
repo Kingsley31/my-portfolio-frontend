@@ -28,12 +28,12 @@ export function ProjectSlider(){
     if (!mounted) return (<div className="flex items-center md:items-start justify-center">
                               <Skeleton className="w-2/3 h-70 md:w-90 md:h-3/5 max-h-95 rounded-sm" />
                             </div>);
-    return (<div className="px-8 md:px-0 h-2/3 md:h-3/5 md:max-h-95 w-screen md:w-4/6 mt-4"><div className="relative w-full h-4/5 md:h-full">
+    return (<div className="px-8 md:px-0 h-3/4 md:h-3/5 md:max-h-95 w-screen md:w-4/6 mt-4"><div className="relative w-full h-6/7 md:h-full">
         {unviewedProjects.map((project,index) => {
             const top = (unviewedProjects.length*3)-(index*3);
             const leftRight = (index*4)
             const zIndex = (unviewedProjects.length*2)-(index*2);
-            console.log(`key: ${project.title}, index: ${index}, top: ${top}, zIndex: ${zIndex}`);
+
             return (<div 
                 key={project.title}
                 style={{
@@ -42,15 +42,15 @@ export function ProjectSlider(){
                     right: `calc(${leftRight}%)`,
                     zIndex
                 }}
-                className={`h-7/8 md:h-3/4 bg-white border-1 border-primary absolute rounded-sm ${index === 0 ? "animate-scale-in" : ""}`}>
+                className={`h-8/9 md:h-3/4 bg-white border-1 border-primary absolute rounded-sm ${index === 0 ? "animate-scale-in" : ""}`}>
                     <div className="flex flex-col-reverse md:flex-row gap-0 md:gap-4 h-full">
                         <div className="flex flex-col gap-2 justify-between">
                             <div className="flex gap-2 ml-4 justify-start items-center mt-1 md:mt-6">{project.techStack.map((stack)=> (<div key={stack}><p  className="grow rounded-md text-white bg-primary text-xs text-center px-2 py-1">{stack}</p></div>))}</div>
                             <h3 className="ml-4 mt-2 font-bold text-base text-start">{project.title}</h3>
                             <div className="ml-4 mr-2 md:mr-0 grow text-sm/6 text-start">{project.shortDescription}</div>
-                            <div className="mb-4 md:mb-6 mt-6 md:mt-0"><span className="inline-block animate-cta-pulse cursor-pointer rounded-l-0 rounded-r-md bg-primary font-bold text-white py-2 px-4 text-xs">View Details &gt;&gt;</span></div>
+                            <div className="mb-4 md:mb-6 mt-1 md:mt-0"><span className="inline-block animate-cta-pulse cursor-pointer rounded-l-0 rounded-r-md bg-primary font-bold text-white py-2 px-4 text-xs">View Details &gt;&gt;</span></div>
                         </div>
-                        <div className="grow h-20 md:h-full rounded-r-sm overflow-hidden"><Image alt="Project Screenshot" src={project.imageUrl} width={770} height={790} className="object-cover max-h-full rounded-r-sm"/></div>
+                        <div className="grow md:h-full rounded-r-sm overflow-hidden"><Image alt="Project Screenshot" src={project.imageUrl} width={770} height={790} className="object-cover max-h-full rounded-r-sm"/></div>
                     </div>
         </div>);})}
     </div>
