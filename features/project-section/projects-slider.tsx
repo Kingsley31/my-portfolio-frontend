@@ -42,15 +42,15 @@ export function ProjectSlider(){
                     right: `calc(${leftRight}%)`,
                     zIndex
                 }}
-                className={`h-8/9 md:h-3/4 bg-white border-1 border-primary absolute rounded-sm ${index === 0 ? "animate-scale-in" : ""}`}>
+                className={`h-8/9 max-h-100 md:max-h-full md:h-3/4 bg-white border-1 border-primary absolute rounded-sm ${index === 0 ? "animate-scale-in" : ""}`}>
                     <div className="flex flex-col-reverse md:flex-row gap-0 md:gap-4 h-full">
-                        <div className="flex flex-col gap-2 justify-between">
+                        <div className="flex flex-col gap-2 justify-between grow">
                             <div className="flex gap-2 ml-4 justify-start items-center mt-1 md:mt-6">{project.techStack.map((stack)=> (<div key={stack}><p  className="grow rounded-md text-white bg-primary text-xs text-center px-2 py-1">{stack}</p></div>))}</div>
                             <h3 className="ml-4 mt-2 font-bold text-base text-start">{project.title}</h3>
                             <div className="ml-4 mr-2 md:mr-0 grow text-sm/6 text-start">{project.shortDescription}</div>
                             <div className="mb-4 md:mb-6 mt-1 md:mt-0"><span className="inline-block animate-cta-pulse cursor-pointer rounded-l-0 rounded-r-md bg-primary font-bold text-white py-2 px-4 text-xs">View Details &gt;&gt;</span></div>
                         </div>
-                        <div className="grow md:h-full rounded-r-sm overflow-hidden"><Image alt="Project Screenshot" src={project.imageUrl} width={770} height={790} className="object-cover max-h-full rounded-r-sm"/></div>
+                        <div className="grow max-h-40 md:max-h-full md:h-full rounded-r-sm overflow-hidden"><Image alt="Project Screenshot" src={project.imageUrl} width={770} height={790} className="object-cover max-h-full rounded-r-sm"/></div>
                     </div>
         </div>);})}
     </div>
